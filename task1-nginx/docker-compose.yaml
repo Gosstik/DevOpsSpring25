@@ -1,0 +1,18 @@
+services:
+  mynginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mynginx
+    ports:
+      - "8080:80"
+    volumes:
+      - static_content:/static/html
+
+volumes:
+  static_content:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/html
