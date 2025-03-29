@@ -8,6 +8,7 @@ services:
       - "8080:80"
     volumes:
       - static_content:/static/html
+    restart: unless-stopped
 
 volumes:
   static_content:
