@@ -23,6 +23,11 @@ docker exec -it mynginx /bin/sh
 docker run --mount type=volume,src=<volume-name>,dst=<mount-path>
 ```
 
+Creating of less layers decreases image size:
+
+- <https://habr.com/ru/companies/ruvds/articles/485650/>
+- <https://ru.hexlet.io/courses/docker-basics/lessons/image-layers/theory_unit>
+
 Utility
 
 ```bash
@@ -44,4 +49,12 @@ sudo nginx -s quit # graceful stop
 
 sudo nginx -t # test configuration
 sudo nginx -s reload # reload config
+
+### Help
+sudo nginx -h # print help and basic commands
+sudo nginx -V # shows all configuration options
 ```
+
+- [Beginner guide](https://nginx.org/en/docs/beginners_guide.html) on nginx.
+- [Structure](https://docs.nginx.com/nginx/admin-guide/basic-functionality/managing-configuration-files/) of nginx config file.
+
